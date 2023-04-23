@@ -7,15 +7,15 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug executable 'ExploreRust'",
+      "name": "Debug executable 'explore-rust'",
       "cargo": {
         "args": [
           "build",
-          "--bin=ExploreRust",
-          "--package=ExploreRust"
+          "--bin=explore-rust",
+          "--package=explore-rust"
         ],
         "filter": {
-          "name": "ExploreRust",
+          "name": "explore-rust",
           "kind": "bin"
         }
       },
@@ -25,16 +25,16 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug unit tests in executable 'ExploreRust'",
+      "name": "Debug unit tests in executable 'explore-rust'",
       "cargo": {
         "args": [
           "test",
           "--no-run",
-          "--bin=ExploreRust",
-          "--package=ExploreRust"
+          "--bin=explore-rust",
+          "--package=explore-rust"
         ],
         "filter": {
-          "name": "ExploreRust",
+          "name": "explore-rust",
           "kind": "bin"
         }
       },
