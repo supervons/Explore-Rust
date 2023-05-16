@@ -1,9 +1,9 @@
 fn main() {
     let s = String::from("hello"); // s 进入作用域
 
-    let s1 = takes_ownership(s); // s 的值移动到函数里 ...
-                                 // ... 所以到这里不再有效
-    println!("{}", s1);
+    let s1 = takes_ownership(&s); // s 改为引用
+    println!("s :{}", s); // s 也可以再次使用
+    println!("s1 :{}", s1);
     let x = 5; // x 进入作用域
 
     makes_copy(x); // x 应该移动函数里，
@@ -11,7 +11,7 @@ fn main() {
 } // 这里, x 先移出了作用域，然后是 s。但因为 s 的值已被移走，
   // 所以不会有特殊操作
 
-fn takes_ownership(some_string: String) -> String {
+fn takes_ownership(some_string: &String) -> &String {
     // some_string 进入作用域
     println!("{}", some_string);
     return some_string;
